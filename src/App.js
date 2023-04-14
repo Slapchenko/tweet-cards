@@ -2,11 +2,13 @@
 // import './App.css';
 import { UserCard } from "./components";
 
+import users from "./data/users.json"
+
 const App = () => {
   return (
     <div className="App">
       <p>test</p>
-      <UserCard />
+      <UserCard users={users}/>
     </div>
   );
 };
