@@ -71,7 +71,7 @@ export const SubscribeButton = styled.button`
   text-transform: uppercase;
   border: none;
   color: #373737;
-  background-color: #ebd8ff;
+  background-color: ${({ follow }) => (follow ? "#5cd3a8" : "#ebd8ff")};
   padding: 14px 28px;
   border-radius: 10px;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);

@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+import { toggleFollow } from "../../redux/userSlice";
 import {
   BackgroundImage,
   CardDivider,
@@ -8,9 +10,17 @@ import {
   SubscribeButton,
 } from "./TweetCardItem.styled";
 
-import bg from "./bg.png";
+import bg from "./bg.png"; //!
 
-const TweetCardItem = ({ user: { user, tweets, followers, avatar } }) => {
+const TweetCardItem = ({
+  user: { id, user, tweets, followers, avatar, follow },
+}) => {
+  const dispatch = useDispatch();
+
+  const handleFollowToggle = () => {
+    dispatch(toggleFollow(id));
+  };
+
   return (
     <>
       <BackgroundImage src={bg} alt="avatar" />
@@ -20,7 +30,9 @@ const TweetCardItem = ({ user: { user, tweets, followers, avatar } }) => {
       </UserAvatarWrapper>
       <TweetCount>{`${tweets} tweets`}</TweetCount>
       <FollowerCount>{`${followers} followers`}</FollowerCount>
-      <SubscribeButton>Follow</SubscribeButton>
+      <SubscribeButton follow={follow} onClick={handleFollowToggle}>
+        {follow ? "Following" : "Follow"}
+      </SubscribeButton>
     </>
   );
 };
