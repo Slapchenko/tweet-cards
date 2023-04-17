@@ -9,8 +9,6 @@ import {
 import { TweetCardList } from "../../components";
 import { Loader } from "../../components";
 
-// import users from "../../data/users.json";
-
 const TweetsPage = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
