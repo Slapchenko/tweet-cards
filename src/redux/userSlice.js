@@ -34,4 +34,4 @@ export const usersSlice = createSlice({
   },
 });
 
-export const usersReducer = contactsSlice.reducer;
+export const usersReducer = usersSlice.reducer;
