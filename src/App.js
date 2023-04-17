@@ -9,7 +9,7 @@ const App = () => {
     <div style={{ margin: "0 auto", padding: "0 20px" }}>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/tweets" element={<TweetsPage />} />
+        <Route path="tweets" element={<TweetsPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
     </div>
