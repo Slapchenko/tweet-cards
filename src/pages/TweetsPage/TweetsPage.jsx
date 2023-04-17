@@ -2,18 +2,17 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers } from "../../redux/operations";
 import {
-  selectUsers,
+  selectVisibleUsers,
   selectError,
   selectIsLoading,
 } from "../../redux/selectors";
-import { TweetCardList } from "../../components";
-import { Loader } from "../../components";
+import { TweetCardList, Loader, StatusFilter } from "components";
 
 const TweetsPage = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
-  const users = useSelector(selectUsers);
+  const users = useSelector(selectVisibleUsers);
 
   useEffect(() => {
     dispatch(fetchUsers());
@@ -21,7 +20,7 @@ const TweetsPage = () => {
 
   return (
     <>
-      <p>TweetsPage</p>
+      <StatusFilter />
       <TweetCardList users={users} />
       {isLoading && !error && <Loader />}
     </>
