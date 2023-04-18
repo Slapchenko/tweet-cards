@@ -1,20 +1,19 @@
 import { Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
+import { SharedLayout } from "components";
 
 const HomePage = lazy(() => import("pages/HomePage"));
 const TweetsPage = lazy(() => import("pages/TweetsPage"));
 
 const App = () => {
   return (
-    <div style={{ margin: "0 auto", padding: "0 20px" }}>
-       <Suspense fallback={<div>Loading...</div>}>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<HomePage />} />
         <Route path="tweets" element={<TweetsPage />} />
         <Route path="*" element={<HomePage />} />
-      </Routes>
-       </Suspense>
-    </div>
+      </Route>
+    </Routes>
   );
 };
 
