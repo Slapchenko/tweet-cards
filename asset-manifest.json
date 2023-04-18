@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/tweet-cards/static/css/main.a730a655.css",
-    "main.js": "/tweet-cards/static/js/main.64721931.js",
-    "static/js/35.407ab7a0.chunk.js": "/tweet-cards/static/js/35.407ab7a0.chunk.js",
-    "static/js/250.4465048e.chunk.js": "/tweet-cards/static/js/250.4465048e.chunk.js",
+    "main.js": "/tweet-cards/static/js/main.aba9f170.js",
+    "static/js/35.0f81d8da.chunk.js": "/tweet-cards/static/js/35.0f81d8da.chunk.js",
+    "static/js/993.693b219a.chunk.js": "/tweet-cards/static/js/993.693b219a.chunk.js",
     "static/js/787.57789eb1.chunk.js": "/tweet-cards/static/js/787.57789eb1.chunk.js",
     "static/js/646.70f52e02.chunk.js": "/tweet-cards/static/js/646.70f52e02.chunk.js",
     "static/media/Montserrat-SemiBold.ttf": "/tweet-cards/static/media/Montserrat-SemiBold.62b8eee010e3957d425f.ttf",
@@ -11,14 +11,14 @@
     "static/media/bg.png": "/tweet-cards/static/media/bg.032662a2a907475127d7.png",
     "index.html": "/tweet-cards/index.html",
     "main.a730a655.css.map": "/tweet-cards/static/css/main.a730a655.css.map",
-    "main.64721931.js.map": "/tweet-cards/static/js/main.64721931.js.map",
-    "35.407ab7a0.chunk.js.map": "/tweet-cards/static/js/35.407ab7a0.chunk.js.map",
-    "250.4465048e.chunk.js.map": "/tweet-cards/static/js/250.4465048e.chunk.js.map",
+    "main.aba9f170.js.map": "/tweet-cards/static/js/main.aba9f170.js.map",
+    "35.0f81d8da.chunk.js.map": "/tweet-cards/static/js/35.0f81d8da.chunk.js.map",
+    "993.693b219a.chunk.js.map": "/tweet-cards/static/js/993.693b219a.chunk.js.map",
     "787.57789eb1.chunk.js.map": "/tweet-cards/static/js/787.57789eb1.chunk.js.map",
     "646.70f52e02.chunk.js.map": "/tweet-cards/static/js/646.70f52e02.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a730a655.css",
-    "static/js/main.64721931.js"
+    "static/js/main.aba9f170.js"
   ]
 }
