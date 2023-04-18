@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 export const FancyHeader = styled.header`
   top: 0;
@@ -30,7 +30,8 @@ export const Link = styled(NavLink)`
   text-decoration: none;
   color: #fff;
   font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
   &.active {
-    color: red;
+    color: #5cd3a8;
   }
 `;
