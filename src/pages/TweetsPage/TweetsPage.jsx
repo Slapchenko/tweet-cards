@@ -7,6 +7,8 @@ import {
   selectIsLoading,
 } from "../../redux/selectors";
 import { TweetCardList, Loader, StatusFilter } from "components";
+import { LoadMoreButton } from "./TweetsPage.styled";
+
 
 const TweetsPage = () => {
   const [visible, setVisible] = useState(10)
@@ -31,43 +33,10 @@ const showMoreItems = () => {setVisible((prevValue) => prevValue + 10)}
       <TweetCardList users={users.slice(0, visible)} />
       {isLoading && !error && <Loader />}
       {visible < users.length && (
-  <button onClick={showMoreItems}>Load more</button>
+      <LoadMoreButton onClick={showMoreItems}>Load more</LoadMoreButton>
 )}
     </>
   );
 };
 
 export default TweetsPage;
-
-// import { useEffect, useState } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import { fetchUsers } from "../../redux/operations";
-// import {
-//   selectVisibleUsers,
-//   selectError,
-//   selectIsLoading,
-// } from "../../redux/selectors";
-// import { TweetCardList, Loader, StatusFilter } from "components";
-
-// const TweetsPage = () => {
-//   const [items, setItems] = useState(10)
-//   const [visible, setVisible] = useState(10)
-//   const dispatch = useDispatch();
-//   const isLoading = useSelector(selectIsLoading);
-//   const error = useSelector(selectError);
-//   const users = useSelector(selectVisibleUsers);
-
-//   useEffect(() => {
-//     dispatch(fetchUsers());
-//   }, [dispatch]);
-
-//   return (
-//     <>
-//       <StatusFilter />
-//       <TweetCardList users={users} />
-//       {isLoading && !error && <Loader />}
-//     </>
-//   );
-// };
-
-// export default TweetsPage;
