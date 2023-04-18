@@ -28,8 +28,8 @@ const TweetCardItem = ({
       <UserAvatarWrapper>
         <UserAvatarImage src={avatar} alt={`Avatar of ${user.name}`} />
       </UserAvatarWrapper>
-      <TweetCount>{`${tweets} tweets`}</TweetCount>
-      <FollowerCount>{`${followers} followers`}</FollowerCount>
+      <TweetCount>{`${(tweets + 100000).toLocaleString('en-US')} tweets`}</TweetCount>
+      <FollowerCount>{`${followers.toLocaleString('en-US')} followers`}</FollowerCount>
       <SubscribeButton follow={follow} onClick={handleFollowToggle}>
         {follow ? "Following" : "Follow"}
       </SubscribeButton>
