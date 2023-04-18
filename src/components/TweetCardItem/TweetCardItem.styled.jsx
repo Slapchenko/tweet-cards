@@ -6,6 +6,15 @@ export const BackgroundImage = styled.img`
   margin-bottom: 88px;
 `;
 
+export const LogoImage = styled.img`
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 76px;
+  height: 22px;
+  z-index: 9999;
+`;
+
 export const CardDivider = styled.div`
   position: absolute;
   top: 214px;

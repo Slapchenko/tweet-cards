@@ -1,7 +1,8 @@
 import { useDispatch } from "react-redux";
-import { toggleFollow } from "../../redux/operations"
+import { toggleFollow } from "../../redux/operations";
 import {
   BackgroundImage,
+  LogoImage,
   CardDivider,
   UserAvatarWrapper,
   UserAvatarImage,
@@ -10,7 +11,8 @@ import {
   SubscribeButton,
 } from "./TweetCardItem.styled";
 
-import bg from "./bg.png"; //!
+import logoIcon from "./logoImg.png";
+import bg from "./bgImg.png"; //!
 
 const TweetCardItem = ({
   user: { id, user, tweets, followers, avatar, follow },
@@ -24,12 +26,15 @@ const TweetCardItem = ({
   return (
     <>
       <BackgroundImage src={bg} alt="avatar" />
+      <LogoImage src={logoIcon} alt="Logo" />
       <CardDivider />
       <UserAvatarWrapper>
         <UserAvatarImage src={avatar} alt={`Avatar of ${user.name}`} />
       </UserAvatarWrapper>
-      <TweetCount>{`${(tweets + 100000).toLocaleString('en-US')} tweets`}</TweetCount>
-      <FollowerCount>{`${followers.toLocaleString('en-US')} followers`}</FollowerCount>
+      <TweetCount>{`${tweets.toLocaleString("en-US")} tweets`}</TweetCount>
+      <FollowerCount>{`${(followers + 100000).toLocaleString(
+        "en-US"
+      )} followers`}</FollowerCount>
       <SubscribeButton follow={follow} onClick={handleFollowToggle}>
         {follow ? "Following" : "Follow"}
       </SubscribeButton>

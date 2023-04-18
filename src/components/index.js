@@ -4,4 +4,4 @@ export { default as Loader } from "./Loader/Loader";
 export { default as StatusFilter } from "./StatusFilter/StatusFilter";
 export { default as SharedLayout } from "./SharedLayout/SharedLayout";
 export { default as Header } from "./Header/Header";
-
+export { default as BackLinkBtn } from "./BackLinkBtn/BackLinkBtn";
