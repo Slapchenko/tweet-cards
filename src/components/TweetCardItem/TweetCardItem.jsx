@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { toggleFollow } from "../../redux/userSlice";
+import { toggleFollow } from "../../redux/operations"
 import {
   BackgroundImage,
   CardDivider,
