@@ -1,5 +1,7 @@
 import { useDispatch } from "react-redux";
 import { toggleFollow } from "../../redux/operations";
+import logoIcon from "../../images/logoImg.png";
+import bgImg from "../../images/bgImg.png";
 import {
   BackgroundImage,
   LogoImage,
@@ -10,9 +12,6 @@ import {
   FollowerCount,
   SubscribeButton,
 } from "./TweetCardItem.styled";
-
-import logoIcon from "./logoImg.png";
-import bg from "./bgImg.png"; //!
 
 const TweetCardItem = ({
   user: { id, user, tweets, followers, avatar, follow },
@@ -25,7 +24,7 @@ const TweetCardItem = ({
 
   return (
     <>
-      <BackgroundImage src={bg} alt="avatar" />
+      <BackgroundImage src={bgImg} alt="avatar" />
       <LogoImage src={logoIcon} alt="Logo" />
       <CardDivider />
       <UserAvatarWrapper>
